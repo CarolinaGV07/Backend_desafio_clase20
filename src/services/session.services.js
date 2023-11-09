@@ -13,6 +13,9 @@ const transporter = nodemailer.createTransport({
     user: config.USER,
     pass: config.PASS,
   },
+  tls: {
+    rejectUnauthorized: false,
+  }
 });
 
 export default class SessionServices {
